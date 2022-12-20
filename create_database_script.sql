@@ -1,5 +1,5 @@
 IF OBJECT_ID('Film_Production', 'U') IS NOT NULL
-    DROP DATABASE Films_Production
+    DROP DATABASE Film_Production
 CREATE DATABASE Film_Production
 GO
 USE Film_Production
@@ -25,8 +25,9 @@ CREATE TABLE Series (
     id_production INT PRIMARY KEY,
     genre VARCHAR(256) NOT NULL,
     start_date DATE NOT NULL,
-    finish_date DATE NOT NULL,
-    number_of_seasons INT NOT NULL
+    finish_date DATE,
+    number_of_seasons INT NOT NULL,
+    number_of_episodes INT NOT NULL
 );
 
 ALTER TABLE Series
@@ -69,7 +70,7 @@ ADD Constraint [Production ID1] FOREIGN KEY (id_production) REFERENCES Productio
 CREATE TABLE Streaming_platforms (
     id_platform INT PRIMARY KEY IDENTITY(1,1),
     platform_name VARCHAR(256) NOT NULL,
-    subscribtion_cost MONEY NOT NULL,
+    subscription_cost MONEY NOT NULL,
     origin_country VARCHAR(256) NOT NULL
 );
 
