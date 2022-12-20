@@ -184,39 +184,3 @@ INSERT INTO Series VALUES
 (77, 'thriller', 2014, 2019, 3, 18),
 (78, 'thriller', 2015, 2019, 4, 45),
 (79, 'comedy', 2007, 2019, 12, 279);
-
-
-
-
-INSERT INTO Series VALUES
-(51, 'drama', 2019, 2019, 1, 5),
-(52, 'crime drama', 2008, 2013, 5, 62),
-(53, 'fantasy drama', 2011, 2019, 8, 73),
-(54, 'drama', 2001, 2001, 1, 10),
-(55, 'sitcom', 2019, 2019, 1, 5),
-(56, 'crime drama', 2010, 2017, 4, 13),
-(57, 'crime drama', 2013, 2022, 6, 36),
-(58, 'crime drama', 2015, 2017, 3, 30),
-(59, 'comedy', 2014, 2020, 6, 77),
-(60, 'drama', 1990, 1991, 2, 30),
-(61, 'thriller', 2013, 2018, 6, 73),
-(62, 'historical drama', 2013, 2020, 6, 89),
-(63, 'horror', 2016, NULL, 4, 34),
-(64, 'crime drama', 1999, 2007, 6, 86),
-(65, 'anthology', 2011, NULL, 5, 22),
-(66, 'sitcom', 1994, 2004, 10, 236),
-(67, 'mockumentary', 2001, 2008, 12, 105),
-(68, 'crime drama', 2006, 2013, 9, 96),
-(69, 'sci-fi thriller', 2017, 2020, 3, 26),
-(70, 'crime drama', 2015, 2022, 6, 63),
-(71, 'crime drama', 2017, 2021, 3, 41),
-(72, 'historical drama', 2016, NULL, 5, 50),
-(73, 'crime drama', 2014, NULL, 4, 41),
-(74, 'action', 2005, 2008, 3, 31),
-(75, 'drama', 2018, NULL, 1, 5),
-(76, 'drama', 2011, 2019, 9, 134),
-(77, 'action', 2008, 2014, 7, 92),
-(78, 'thriller', 2014, 2019, 3, 18),
-(79, 'thriller', 2015, 2019, 4, 45),
-(80, 'comedy', 2007, 2019, 12, 279);
-
