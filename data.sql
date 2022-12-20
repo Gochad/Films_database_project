@@ -8,7 +8,6 @@ INSERT INTO Streaming_platforms VALUES
 ('Player', 6.40, 'Poland'),
 ('Mubi', 10.99, 'United Kingdom');
 
-
 INSERT INTO Award_ceremonies VALUES
 ('Oscar', '1929-01-01', 'USA'),
 ('Golden Globe', '1944-01-01', 'USA'),
@@ -71,9 +70,37 @@ INSERT INTO Productions VALUES
 ('Cape Fear', 'Movie'),
 ('Jurassic Park', 'Movie'),
 ('Misery', 'Movie'),
-('Saturday Night Fever', 'Movie');
-
-
+('Saturday Night Fever', 'Movie'),
+('Czarnobyl', 'Series'),
+('Breaking Bad', 'Series'),
+('Game of Thrones', 'Series'),
+('Band of Brothers', 'Series'),
+('The Office', 'Series'),
+('Sherlock', 'Series'),
+('Peaky Blinders', 'Series'),
+('Narcos', 'Series'),
+('BoJack Horseman', 'Series'),
+('Twin Peaks', 'Series'),
+('House of Cards', 'Series'),
+('Vikings', 'Series'),
+('Stranger Things', 'Series'),
+('The Sopranos', 'Series'),
+('Black Mirror', 'Series'),
+('Friends', 'Series'),
+('Trailer Park Boys', 'Series'),
+('Dexter', 'Series'),
+('Dark', 'Series'),
+('Better Call Saul', 'Series'),
+('La casa de papel', 'Series'),
+('The crown', 'Series'),
+('Fargo', 'Series'),
+('Pitbull', 'Series'),
+('Yellowstone', 'Series'),
+('Suits', 'Series'),
+('Sons of Anarchy', 'Series'),
+('Wataha', 'Series'),
+('Mr. Robot', 'Series'),
+('The Big Bang Theory', 'Series');
 
 INSERT INTO Movies VALUES
 (1, 'drama', 'USA', '1994-09-10', 142),
@@ -115,44 +142,50 @@ INSERT INTO Movies VALUES
 (37, 'thriller', 'Norway', '2011-08-04', 98),
 (38, 'drama', 'Denmark', '2020-05-20', 115),
 (39, 'drama', 'USA', '2014-09-05', 117),
-(40, 'thriller', 'USA', '2015-09-02', 121);
+(40, 'thriller', 'USA', '2015-09-02', 121),
+(41, 'drama', 'USA', '2019-08-31', 122),
+(42, 'sci-fi thriller', 'USA', '2020-08-26', 150),
+(43, 'sci-fi', 'USA', '2017-10-03', 163),
+(44, 'sci-fi', 'USA', '1984-10-26', 107),
+(45, 'horror', 'USA', '1980-05-23', 146),
+(46, 'thriller', 'USA', '1962-04-12', 105),
+(47, 'adventure', 'USA', '1993-06-09', 127),
+(48, 'thriller', 'USA', '1990-11-30', 107),
+(49, 'drama', 'USA', '1977-12-14', 119);
+
+INSERT INTO Series VALUES
+(50, 'drama', 2019, 2019, 1, 5),
+(51, 'crime drama', 2008, 2013, 5, 62),
+(52, 'fantasy drama', 2011, 2019, 8, 73),
+(53, 'drama', 2001, 2001, 1, 10),
+(54, 'sitcom', 2019, 2019, 1, 5),
+(55, 'crime drama', 2010, 2017, 4, 13),
+(56, 'crime drama', 2013, 2022, 6, 36),
+(57, 'crime drama', 2015, 2017, 3, 30),
+(58, 'comedy', 2014, 2020, 6, 77),
+(59, 'drama', 1990, 1991, 2, 30),
+(60, 'thriller', 2013, 2018, 6, 73),
+(61, 'historical drama', 2013, 2020, 6, 89),
+(62, 'horror', 2016, NULL, 4, 34),
+(63, 'crime drama', 1999, 2007, 6, 86),
+(64, 'anthology', 2011, NULL, 5, 22),
+(65, 'sitcom', 1994, 2004, 10, 236),
+(66, 'mockumentary', 2001, 2008, 12, 105),
+(67, 'crime drama', 2006, 2013, 9, 96),
+(68, 'sci-fi thriller', 2017, 2020, 3, 26),
+(69, 'crime drama', 2015, 2022, 6, 63),
+(70, 'crime drama', 2017, 2021, 3, 41),
+(71, 'historical drama', 2016, NULL, 5, 50),
+(72, 'crime drama', 2014, NULL, 4, 41),
+(73, 'action', 2005, 2008, 3, 31),
+(74, 'drama', 2018, NULL, 1, 5),
+(75, 'drama', 2011, 2019, 9, 134),
+(76, 'action', 2008, 2014, 7, 92),
+(77, 'thriller', 2014, 2019, 3, 18),
+(78, 'thriller', 2015, 2019, 4, 45),
+(79, 'comedy', 2007, 2019, 12, 279);
 
 
-
-
-
-
-INSERT INTO Productions VALUES
-('Czarnobyl', 'Series'),
-('Breaking Bad', 'Series'),
-('Game of Thrones', 'Series'),
-('Band of Brothers', 'Series'),
-('The Office', 'Series'),
-('Sherlock', 'Series'),
-('Peaky Blinders', 'Series'),
-('Narcos', 'Series'),
-('BoJack Horseman', 'Series'),
-('Twin Peaks', 'Series'),
-('House of Cards', 'Series'),
-('Vikings', 'Series'),
-('Stranger Things', 'Series'),
-('The Sopranos', 'Series'),
-('Black Mirror', 'Series'),
-('Friends', 'Series'),
-('Trailer Park Boys', 'Series'),
-('Dexter', 'Series'),
-('Dark', 'Series'),
-('Better Call Saul', 'Series'),
-('La casa de papel', 'Series'),
-('The crown', 'Series'),
-('Fargo', 'Series'),
-('Pitbull', 'Series'),
-('Yellowstone', 'Series'),
-('Suits', 'Series'),
-('Sons of Anarchy', 'Series'),
-('Wataha', 'Series'),
-('Mr. Robot', 'Series'),
-('The Big Bang Theory', 'Series')
 
 
 INSERT INTO Series VALUES
@@ -186,3 +219,4 @@ INSERT INTO Series VALUES
 (78, 'thriller', 2014, 2019, 3, 18),
 (79, 'thriller', 2015, 2019, 4, 45),
 (80, 'comedy', 2007, 2019, 12, 279);
+
