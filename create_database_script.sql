@@ -15,7 +15,7 @@ CREATE TABLE Movies (
     genre VARCHAR(256) NOT NULL,
     production_country VARCHAR(256) NOT NULL,
     release_date DATE NOT NULL,
-    duration TIME NOT NULL
+    duration INT NOT NULL
 );
 
 ALTER TABLE Movies
@@ -73,15 +73,15 @@ CREATE TABLE Streaming_platforms (
     origin_country VARCHAR(256) NOT NULL
 );
 
-CREATE TABLE Production_availibility (
+CREATE TABLE Production_availability (
     id_production INT NOT NULL,
     id_platform INT NOT NULL
 );
 
-ALTER TABLE Production_availibility
+ALTER TABLE Production_availability
 ADD Constraint [Production ID2] FOREIGN KEY (id_production) REFERENCES Productions(id_production);
 
-ALTER TABLE Production_availibility
+ALTER TABLE Production_availability
 ADD Constraint [Platform ID] FOREIGN KEY (id_platform) REFERENCES Streaming_platforms(id_platform);
 
 CREATE TABLE Staff_description (

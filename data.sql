@@ -8,17 +8,18 @@ INSERT INTO Streaming_platforms VALUES
 ('Player', 6.40, 'Poland'),
 ('Mubi', 10.99, 'United Kingdom');
 
+
 INSERT INTO Award_ceremonies VALUES
-('Oscar', 1929-01-01, 'USA'),
-('Golden Globe', 1944-01-01, 'USA'),
-('BAFTA', 1948-01-01, 'United Kingdom'),
-('Cannes', 1946-01-01, 'France'),
-('Golden Lion', 1949-01-01, 'Italy'),
-('Berlinale', 1951-01-01, 'Germany'),
-('Golden Raspberry Award', 1981-01-01, 'USA'),
-('Emmy', 1949-01-01, 'USA'),
-('Satellite Award', 1997-01-01, 'USA'),
-('Saturn Award', 1973-01-01, 'USA');
+('Oscar', '1929-01-01', 'USA'),
+('Golden Globe', '1944-01-01', 'USA'),
+('BAFTA', '1948-01-01', 'United Kingdom'),
+('Cannes', '1946-01-01', 'France'),
+('Golden Lion', '1949-01-01', 'Italy'),
+('Berlinale', '1951-01-01', 'Germany'),
+('Golden Raspberry Award', '1981-01-01', 'USA'),
+('Emmy', '1949-01-01', 'USA'),
+('Satellite Award', '1997-01-01', 'USA'),
+('Saturn Award', '1973-01-01', 'USA');
 
 INSERT INTO Productions VALUES
 ('The Shawshank Redemption', 'Movie'),
@@ -54,7 +55,7 @@ INSERT INTO Productions VALUES
 ('Goodfellas', 'Movie'),
 ('Back to the Future', 'Movie'),
 ('Back to the Future Part II', 'Movie'),
-('Back to the Future III', 'Movie'),
+('Back to the Future Part III', 'Movie'),
 ('Le Gendarme de Saint-Tropez', 'Movie'),
 ('Prisoners', 'Movie'),
 ('Hodejegerne', 'Movie'),
@@ -70,55 +71,51 @@ INSERT INTO Productions VALUES
 ('Cape Fear', 'Movie'),
 ('Jurassic Park', 'Movie'),
 ('Misery', 'Movie'),
-('Saturday Night Fever', 'Movie'),
-('Vertigo', 'Movie');
+('Saturday Night Fever', 'Movie');
+
 
 
 INSERT INTO Movies VALUES
-(1, 'drama', 'USA', 1994-09-10, 142),
-(2, 'drama', 'USA', 1999-12-06, 188),
-(3, 'horror drama', 'USA', 2019-05-19, 110),
-(4, 'sci-fi', 'USA', 2014-10-26, 169),
-(5, 'comedy drama', 'USA', 2019-08-30, 135),
-(6, 'sci-fi', 'USA', 2009-12-10, 162),
-(7, 'court drama', 'USA', 1957-04-10, 96),
-(8, 'drama', 'USA', 1975-11-19, 133),
-(9, 'gangster', 'USA', 1994-05-21, 154),
-(10, 'thriller', 'USA', 1995-09-15, 127),
-(11, 'thriller', 'USA', 1999-09-10, 139),
-(12, 'sci-fi', 'United Kingdom', 2015-01-21, 108),
-(13, 'sci-fi', 'USA', 2010-07-08, 148),
-(14, 'thriller', 'USA', 1991-01-30, 118),
-(15, 'gangster', 'USA', 1983-12-01, 170),
-(16, 'drama', 'USA', 2008-12-09, 116),
-(17, 'drama', 'France', 1994-09-14, 110),
-(18, 'musical', 'USA', 2014-01-16, 105),
-(19, 'war drama', 'USA', 1979-05-10, 147),
-(20, 'western', 'Italy', 1966-12-23, 179),
-(21, 'drama', 'South Korea', 2019-05-21, 132),
-(22, 'war', 'USA', 2009-05-20, 153),
-(23, 'drama', 'USA', 2009-06-13, 93),
-(24, 'thriller', 'USA', 1960-06-16, 109),
-(25, 'comedy drama', 'USA', 2021-07-14, 128),
-(26, 'romance', 'USA', 1986-05-12, 110),
-(27, 'action', 'USA', 2022-05-18, 131),
-(28, 'musical', 'USA', 2022-05-25, 159),
-(29, 'musical', 'United Kingdom', 2019-05-16, 121),
-(30, 'drama', 'USA', 2017-05-25, 100),
-(31, 'gangster', 'USA', 1990-09-09, 146),
-(32, 'sci-fi comedy', 'USA', 1985-07-03, 116),
-(33, 'sci-fi comedy', 'USA', 1989-11-20, 108),
-(34, 'sci-fi comedy', 'USA', 1990-05-25, 118),
-(35, 'comedy', 'France', 1964-09-09, 95),
-(36, 'thriller', 'USA', 2013-08-30, 153),
-(37, 'thriller', 'Norway', 2011-08-04, 98),
-(38, 'drama', 'Denmark', 2020-05-20, 115),
-(39, 'drama', 'USA', 2014-09-05, 117),
-(40, 'thriller', 'USA', 2015-09-02, 121);
-
-
-
-
+(1, 'drama', 'USA', '1994-09-10', 142),
+(2, 'drama', 'USA', '1999-12-06', 188),
+(3, 'horror drama', 'USA', '2019-05-19', 110),
+(4, 'sci-fi', 'USA', '2014-10-26', 169),
+(5, 'comedy drama', 'USA', '2019-08-30', 135),
+(6, 'sci-fi', 'USA', '2009-12-10', 162),
+(7, 'court drama', 'USA', '1957-04-10', 96),
+(8, 'drama', 'USA', '1975-11-19', 133),
+(9, 'gangster', 'USA', '1994-05-21', 154),
+(10, 'thriller', 'USA', '1995-09-15', 127),
+(11, 'thriller', 'USA', '1999-09-10', 139),
+(12, 'sci-fi', 'United Kingdom', '2015-01-21', 108),
+(13, 'sci-fi', 'USA', '2010-07-08', 148),
+(14, 'thriller', 'USA', '1991-01-30', 118),
+(15, 'gangster', 'USA', '1983-12-01', 170),
+(16, 'drama', 'USA', '2008-12-09', 116),
+(17, 'drama', 'France', '1994-09-14', 110),
+(18, 'musical', 'USA', '2014-01-16', 105),
+(19, 'war drama', 'USA', '1979-05-10', 147),
+(20, 'western', 'Italy', '1966-12-23', 179),
+(21, 'drama', 'South Korea', '2019-05-21', 132),
+(22, 'war', 'USA', '2009-05-20', 153),
+(23, 'drama', 'USA', '2009-06-13', 93),
+(24, 'thriller', 'USA', '1960-06-16', 109),
+(25, 'comedy drama', 'USA', '2021-07-14', 128),
+(26, 'romance', 'USA', '1986-05-12', 110),
+(27, 'action', 'USA', '2022-05-18', 131),
+(28, 'musical', 'USA', '2022-05-25', 159),
+(29, 'musical', 'United Kingdom', '2019-05-16', 121),
+(30, 'drama', 'USA', '2017-05-25', 100),
+(31, 'gangster', 'USA', '1990-09-09', 146),
+(32, 'sci-fi comedy', 'USA', '1985-07-03', 116),
+(33, 'sci-fi comedy', 'USA', '1989-11-20', 108),
+(34, 'sci-fi comedy', 'USA', '1990-05-25', 118),
+(35, 'comedy', 'France', '1964-09-09', 95),
+(36, 'thriller', 'USA', '2013-08-30', 153),
+(37, 'thriller', 'Norway', '2011-08-04', 98),
+(38, 'drama', 'Denmark', '2020-05-20', 115),
+(39, 'drama', 'USA', '2014-09-05', 117),
+(40, 'thriller', 'USA', '2015-09-02', 121);
 
 
 
@@ -188,5 +185,4 @@ INSERT INTO Series VALUES
 (77, 'action', 2008, 2014, 7, 92),
 (78, 'thriller', 2014, 2019, 3, 18),
 (79, 'thriller', 2015, 2019, 4, 45),
-(80, 'comedy', 2007, 2019, 12, 279),
-
+(80, 'comedy', 2007, 2019, 12, 279);
