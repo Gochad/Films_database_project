@@ -24,8 +24,8 @@ ADD Constraint [Movie ID] FOREIGN KEY (id_production) REFERENCES Productions(id_
 CREATE TABLE Series (
     id_production INT PRIMARY KEY,
     genre VARCHAR(256) NOT NULL,
-    start_date DATE NOT NULL,
-    finish_date DATE,
+    start_year INT NOT NULL,
+    finish_year INT,
     number_of_seasons INT NOT NULL,
     number_of_episodes INT NOT NULL
 );
@@ -38,7 +38,6 @@ CREATE TABLE Production_statistics (
     profit MONEY NOT NULL,
     budget MONEY NOT NULL,
     viewers INT,
-    -- awards INT, CHYBA REDUNDACJA (bo da sie to wyliczyc innymi tabelami)
     number_of_cinemas INT,
     number_of_cast INT,
     rating FLOAT
