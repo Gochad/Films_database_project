@@ -15,7 +15,7 @@ CREATE TABLE Movies (
     genre VARCHAR(256) NOT NULL,
     production_country VARCHAR(256) NOT NULL,
     release_date DATE NOT NULL,
-    duration TIME NOT NULL
+    duration INT NOT NULL
 );
 
 ALTER TABLE Movies
@@ -144,7 +144,7 @@ ADD Constraint [Author ID] FOREIGN KEY (id_author) REFERENCES People(id_person);
 
 CREATE TABLE Award_ceremonies (
     id_ceremony INT PRIMARY KEY IDENTITY(1,1),
-    award_ame VARCHAR(256) NOT NULL,
+    award_name VARCHAR(256) NOT NULL,
     start_date DATE NOT NULL,
     country VARCHAR(256) NOT NULL
 );
@@ -152,7 +152,7 @@ CREATE TABLE Award_ceremonies (
 
 CREATE TABLE Person_awards (
     id_award INT PRIMARY KEY IDENTITY(1,1),
-    year DATE NOT NULL,
+    year INT NOT NULL,
     id_person INT NOT NULL,
     id_production INT NOT NULL,
     id_ceremony INT NOT NULL
@@ -169,7 +169,7 @@ ADD Constraint [Production ID6] FOREIGN KEY (id_production) REFERENCES Productio
 
 CREATE TABLE Production_awards (
     id_award INT PRIMARY KEY IDENTITY(1,1),
-    year DATE NOT NULL,
+    year INT NOT NULL,
     id_production INT NOT NULL,
     id_ceremony INT NOT NULL
 );
