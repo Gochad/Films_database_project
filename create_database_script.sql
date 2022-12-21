@@ -15,7 +15,7 @@ CREATE TABLE Movies (
     genre VARCHAR(256) NOT NULL,
     production_country VARCHAR(256) NOT NULL,
     release_date DATE NOT NULL,
-    duration INT NOT NULL
+    duration TIME NOT NULL
 );
 
 ALTER TABLE Movies
@@ -38,7 +38,6 @@ CREATE TABLE Production_statistics (
     profit MONEY NOT NULL,
     budget MONEY NOT NULL,
     viewers INT,
-    number_of_cinemas INT,
     number_of_cast INT,
     rating FLOAT
 )
@@ -73,15 +72,15 @@ CREATE TABLE Streaming_platforms (
     origin_country VARCHAR(256) NOT NULL
 );
 
-CREATE TABLE Production_availability (
+CREATE TABLE Production_availibility (
     id_production INT NOT NULL,
     id_platform INT NOT NULL
 );
 
-ALTER TABLE Production_availability
+ALTER TABLE Production_availibility
 ADD Constraint [Production ID2] FOREIGN KEY (id_production) REFERENCES Productions(id_production);
 
-ALTER TABLE Production_availability
+ALTER TABLE Production_availibility
 ADD Constraint [Platform ID] FOREIGN KEY (id_platform) REFERENCES Streaming_platforms(id_platform);
 
 CREATE TABLE Staff_description (
@@ -131,8 +130,8 @@ ADD Constraint [Person ID1] FOREIGN KEY (id_person) REFERENCES People(id_person)
 
 CREATE TABLE Soundtracks (
     id_soundtrack INT PRIMARY KEY IDENTITY(1,1),
-    soundtrack_name VARCHAR(256) NOT NULL,
-    genre VARCHAR(256) NOT NULL,
+    number_of_tracks INT NOT NULL,
+    duration INT NOT NULL,
     id_production INT NOT NULL,
     id_author INT NOT NULL
 );
