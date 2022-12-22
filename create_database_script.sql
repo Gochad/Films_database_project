@@ -55,7 +55,7 @@ CREATE TABLE Cinemas (
 CREATE TABLE Screenings (
     id_screening INT PRIMARY KEY IDENTITY(1,1),
     id_cinema INT NOT NULL,
-    date DATETIME NOT NULL,
+    date SMALLDATETIME NOT NULL,
     id_production INT NOT NULL
 );
 
