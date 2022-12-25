@@ -30,7 +30,7 @@ CREATE VIEW Average_budget_through_cinema AS
 
 --5 Widok: pokaż ile każdy gatunek filmowy dostał nagród i jakich konkretnie (typowo dla produkcji)
 CREATE VIEW Genre_awards AS
-    SELECT ac.award_name, m.genre, COALESCE(COUNT(pa.id_production)) AS awards_count
+    SELECT ac.award_name, m.genre, COALESCE(COUNT(pa.id_production), 0) AS awards_count
     FROM Award_ceremonies ac
     JOIN Production_awards pa ON (ac.id_ceremony = pa.id_ceremony)
     JOIN Movies m ON (pa.id_production = m.id_production)
