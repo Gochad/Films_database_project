@@ -1,8 +1,8 @@
 IF OBJECT_ID('Film_Production', 'U') IS NOT NULL
-    DROP DATABASE Film_Production1
-CREATE DATABASE Film_Production1
+    DROP DATABASE Film_Production
+CREATE DATABASE Film_Production
 GO
-USE Film_Production1
+USE Film_Production
 
 CREATE TABLE Productions (
     id_production INT PRIMARY KEY IDENTITY(1,1),
