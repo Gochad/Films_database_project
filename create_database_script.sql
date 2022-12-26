@@ -1,8 +1,8 @@
 IF OBJECT_ID('Film_Production', 'U') IS NOT NULL
-    DROP DATABASE Film_Production
-CREATE DATABASE Film_Production
+    DROP DATABASE Film_Production1
+CREATE DATABASE Film_Production1
 GO
-USE Film_Production
+USE Film_Production1
 
 CREATE TABLE Productions (
     id_production INT PRIMARY KEY IDENTITY(1,1),
@@ -56,7 +56,8 @@ CREATE TABLE Screenings (
     id_screening INT PRIMARY KEY IDENTITY(1,1),
     id_cinema INT NOT NULL,
     date SMALLDATETIME NOT NULL,
-    id_production INT NOT NULL
+    id_production INT NOT NULL,
+    id_room INT NOT NULL
 );
 
 ALTER TABLE Screenings
@@ -179,3 +180,15 @@ ADD Constraint [Ceremony ID1] FOREIGN KEY (id_ceremony) REFERENCES Award_ceremon
 
 ALTER TABLE Production_awards
 ADD Constraint [Production ID7] FOREIGN KEY (id_production) REFERENCES Productions(id_production);
+
+CREATE TABLE Screening_rooms (
+    id_room INT PRIMARY KEY IDENTITY(1,1),
+    id_cinema INT NOT NULL,
+    capacity INT NOT NULL
+);
+
+ALTER TABLE Screening_rooms
+ADD Constraint [Cinema ID1] FOREIGN KEY (id_cinema) REFERENCES Cinemas(id_cinema);
+
+ALTER TABLE Screenings
+ADD Constraint [Screening room ID] FOREIGN KEY (id_room) REFERENCES Screening_rooms(id_room);
