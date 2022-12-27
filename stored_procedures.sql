@@ -178,5 +178,3 @@ AS
 	WHERE name = @name;
 GO
 
-
-

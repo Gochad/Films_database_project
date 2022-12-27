@@ -826,6 +826,39 @@ INSERT INTO People VALUES
 /*62*/('Evangelos', 'Papathanassiou', 'M', 79, 'Greece', 196),
 /*63*/('Joon-ho', 'Bong', 'M', 53, 'South Korea', 182);
 
+INSERT INTO Screening_rooms VALUES
+(1, 100),
+(1, 85),
+(1, 40),
+(2, 90),
+(3, 170),
+(4, 200),
+(4, 25),
+(5, 100),
+(6, 120),
+(7, 100),
+(7, 80),
+(8, 110),
+(9, 50),
+(10, 200),
+(11, 300),
+(11, 350),
+(12, 30),
+(13, 100),
+(14, 80),
+(15, 100),
+(16, 100),
+(17, 50),
+(17, 150),
+(18, 200),
+(19, 230),
+(20, 130),
+(20, 75),
+(20, 90),
+(21, 100),
+(22, 120),
+(22, 125);
+
 INSERT INTO Staff VALUES
 (1, 1, 5),
 (1, 3, 1),
@@ -1028,3 +1061,8 @@ INSERT INTO Soundtracks VALUES
 (14, 49, 13, 58),
 (12, 48, 42, 57),
 (16, 51, 42, 62);
+
+INSERT INTO User_table VALUES
+('admin', 'admin', 'ADMIN'),
+('wojtek', 'wojtek', 'USER'),
+('gocha', 'gocha', 'USER')

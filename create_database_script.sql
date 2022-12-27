@@ -56,7 +56,8 @@ CREATE TABLE Screenings (
     id_screening INT PRIMARY KEY IDENTITY(1,1),
     id_cinema INT NOT NULL,
     date SMALLDATETIME NOT NULL,
-    id_production INT NOT NULL
+    id_production INT NOT NULL,
+    id_room INT NOT NULL
 );
 
 ALTER TABLE Screenings
@@ -186,3 +187,14 @@ CREATE TABLE User_table (
     userpassword VARCHAR(255),
     user_type VARCHAR(255)
 );
+CREATE TABLE Screening_rooms (
+    id_room INT PRIMARY KEY IDENTITY(1,1),
+    id_cinema INT NOT NULL,
+    capacity INT NOT NULL
+);
+
+ALTER TABLE Screening_rooms
+ADD Constraint [Cinema ID1] FOREIGN KEY (id_cinema) REFERENCES Cinemas(id_cinema) ON DELETE CASCADE ON UPDATE CASCADE;
+
+ALTER TABLE Screenings
+ADD Constraint [Screening room ID] FOREIGN KEY (id_room) REFERENCES Screening_rooms(id_room) ON DELETE CASCADE ON UPDATE CASCADE;
