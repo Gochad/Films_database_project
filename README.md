@@ -17,7 +17,27 @@ Na diagramie znajduję sie graficzna reprezentacja zależności pomiędzy tabela
 ![img.png](img.png)
 
 ## Schemat bazy danych
-![img_1.png](img_1.png)
+![img_2.png](img_2.png)
+
+## Spis tabel
+1. User_table
+2. Production_statistics
+3. Streaming_platforms
+4. Movies
+5. Series
+6. Staff_description
+7. Staff
+8. Roles
+9. Soundtracks
+10. Cinemas
+11. Production_availability
+12. Production_awards
+13. Award_ceremonies
+14. Screening_rooms
+15. People
+16. Person_awards
+17. Screenings
+18. Productions
 ```sql
 
 ```
