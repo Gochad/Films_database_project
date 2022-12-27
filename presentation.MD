@@ -745,3 +745,17 @@ CREATE INDEX production2 ON Production_statistics(id_production);
 CREATE INDEX movies1 ON Movies(id_production);
 CREATE INDEX series1 ON Series(id_production);
 ```
+
+## Aplikacja kliencka
+panel logowania 
+
+![img_5.png](img_5.png)
+
+widok dla użytkownika
+
+![img_3.png](img_3.png)
+
+widok dla admina 
+
+![img_4.png](img_4.png)
+
