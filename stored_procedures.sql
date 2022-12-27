@@ -131,4 +131,52 @@ AS
         GROUP BY id_production
     ) c ON (c.id_production = s.id_production)
 GO
+--Procedury używane w aplikacji klienckiej:
+GO
+CREATE PROC addperson
+(
+    @name VARCHAR(256),
+    @surname VARCHAR(256),
+    @sex VARCHAR(1),
+    @age INT,
+    @country VARCHAR(256),
+    @height INT
+)
+AS
+    INSERT INTO People VALUES
+    (@name, @surname, @sex, @age, @country, @height);
+GO
+USE Film_Production
+GO
+CREATE PROC deleteperson
+(
+    @name VARCHAR(256),
+    @surname VARCHAR(256)
+)
+AS
+    DELETE FROM People
+	WHERE person_name = @name AND person_surname = @surname;
+GO
+
+GO
+CREATE PROC addproduction
+(
+    @name VARCHAR(256),
+    @type VARCHAR(256)
+)
+AS
+    INSERT INTO Productions VALUES
+    (@name, @type);
+GO
+GO
+CREATE PROC deleteproduction
+(
+    @name VARCHAR(256)
+)
+AS
+    DELETE FROM Productions
+	WHERE name = @name;
+GO
+
+
 

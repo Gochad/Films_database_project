@@ -19,7 +19,7 @@ CREATE TABLE Movies (
 );
 
 ALTER TABLE Movies
-ADD Constraint [Movie ID] FOREIGN KEY (id_production) REFERENCES Productions(id_production);
+ADD Constraint [Movie ID] FOREIGN KEY (id_production) REFERENCES Productions(id_production) ON DELETE CASCADE ON UPDATE CASCADE;
 
 CREATE TABLE Series (
     id_production INT PRIMARY KEY,
@@ -31,7 +31,7 @@ CREATE TABLE Series (
 );
 
 ALTER TABLE Series
-ADD Constraint [Series ID] FOREIGN KEY (id_production) REFERENCES Productions(id_production);
+ADD Constraint [Series ID] FOREIGN KEY (id_production) REFERENCES Productions(id_production) ON DELETE CASCADE ON UPDATE CASCADE;
 
 CREATE TABLE Production_statistics (
     id_production INT PRIMARY KEY,
@@ -43,7 +43,7 @@ CREATE TABLE Production_statistics (
 )
 
 ALTER TABLE Production_statistics
-ADD Constraint [Production ID] FOREIGN KEY (id_production) REFERENCES Productions(id_production);
+ADD Constraint [Production ID] FOREIGN KEY (id_production) REFERENCES Productions(id_production) ON DELETE CASCADE ON UPDATE CASCADE;
 
 CREATE TABLE Cinemas (
     id_cinema INT PRIMARY KEY IDENTITY(1,1),
@@ -60,10 +60,10 @@ CREATE TABLE Screenings (
 );
 
 ALTER TABLE Screenings
-ADD Constraint [Cinema ID] FOREIGN KEY (id_cinema) REFERENCES Cinemas(id_cinema);
+ADD Constraint [Cinema ID] FOREIGN KEY (id_cinema) REFERENCES Cinemas(id_cinema) ON DELETE CASCADE ON UPDATE CASCADE;
 
 ALTER TABLE Screenings
-ADD Constraint [Production ID1] FOREIGN KEY (id_production) REFERENCES Productions(id_production);
+ADD Constraint [Production ID1] FOREIGN KEY (id_production) REFERENCES Productions(id_production) ON DELETE CASCADE ON UPDATE CASCADE;
 
 CREATE TABLE Streaming_platforms (
     id_platform INT PRIMARY KEY IDENTITY(1,1),
@@ -78,10 +78,10 @@ CREATE TABLE Production_availability (
 );
 
 ALTER TABLE Production_availability
-ADD Constraint [Production ID2] FOREIGN KEY (id_production) REFERENCES Productions(id_production);
+ADD Constraint [Production ID2] FOREIGN KEY (id_production) REFERENCES Productions(id_production) ON DELETE CASCADE ON UPDATE CASCADE;
 
 ALTER TABLE Production_availability
-ADD Constraint [Platform ID] FOREIGN KEY (id_platform) REFERENCES Streaming_platforms(id_platform);
+ADD Constraint [Platform ID] FOREIGN KEY (id_platform) REFERENCES Streaming_platforms(id_platform) ON DELETE CASCADE ON UPDATE CASCADE;
 
 CREATE TABLE Staff_description (
     id_staff INT PRIMARY KEY IDENTITY(1,1),
@@ -95,10 +95,10 @@ CREATE TABLE Staff (
 );
 
 ALTER TABLE Staff
-ADD Constraint [Staff ID] FOREIGN KEY (id_staff) REFERENCES Staff_description(id_staff);
+ADD Constraint [Staff ID] FOREIGN KEY (id_staff) REFERENCES Staff_description(id_staff) ON DELETE CASCADE ON UPDATE CASCADE;
 
 ALTER TABLE Staff
-ADD Constraint [Production ID3] FOREIGN KEY (id_production) REFERENCES Productions(id_production);
+ADD Constraint [Production ID3] FOREIGN KEY (id_production) REFERENCES Productions(id_production) ON DELETE CASCADE ON UPDATE CASCADE;
 
 CREATE TABLE People (
     id_person INT PRIMARY KEY IDENTITY(1,1),
@@ -111,7 +111,7 @@ CREATE TABLE People (
 );
 
 ALTER TABLE Staff
-ADD Constraint [Person ID] FOREIGN KEY (id_person) REFERENCES People(id_person);
+ADD Constraint [Person ID] FOREIGN KEY (id_person) REFERENCES People(id_person) ON DELETE CASCADE ON UPDATE CASCADE;
 
 CREATE TABLE Roles (
     id_role INT PRIMARY KEY IDENTITY(1,1),
@@ -123,10 +123,10 @@ CREATE TABLE Roles (
 );
 
 ALTER TABLE Roles
-ADD Constraint [Production ID4] FOREIGN KEY (id_production) REFERENCES Productions(id_production);
+ADD Constraint [Production ID4] FOREIGN KEY (id_production) REFERENCES Productions(id_production) ON DELETE CASCADE ON UPDATE CASCADE;
 
 ALTER TABLE Roles
-ADD Constraint [Person ID1] FOREIGN KEY (id_person) REFERENCES People(id_person);
+ADD Constraint [Person ID1] FOREIGN KEY (id_person) REFERENCES People(id_person) ON DELETE CASCADE ON UPDATE CASCADE;
 
 CREATE TABLE Soundtracks (
     id_soundtrack INT PRIMARY KEY IDENTITY(1,1),
@@ -137,10 +137,10 @@ CREATE TABLE Soundtracks (
 );
 
 ALTER TABLE Soundtracks
-ADD Constraint [Production ID5] FOREIGN KEY (id_production) REFERENCES Productions(id_production);
+ADD Constraint [Production ID5] FOREIGN KEY (id_production) REFERENCES Productions(id_production) ON DELETE CASCADE ON UPDATE CASCADE;
 
 ALTER TABLE Soundtracks
-ADD Constraint [Author ID] FOREIGN KEY (id_author) REFERENCES People(id_person);
+ADD Constraint [Author ID] FOREIGN KEY (id_author) REFERENCES People(id_person) ON DELETE CASCADE ON UPDATE CASCADE;
 
 CREATE TABLE Award_ceremonies (
     id_ceremony INT PRIMARY KEY IDENTITY(1,1),
@@ -159,13 +159,13 @@ CREATE TABLE Person_awards (
 );
 
 ALTER TABLE Person_awards
-ADD Constraint [Ceremony ID] FOREIGN KEY (id_ceremony) REFERENCES Award_ceremonies(id_ceremony);
+ADD Constraint [Ceremony ID] FOREIGN KEY (id_ceremony) REFERENCES Award_ceremonies(id_ceremony) ON DELETE CASCADE ON UPDATE CASCADE;
 
 ALTER TABLE Person_awards
-ADD Constraint [Person ID2] FOREIGN KEY (id_person) REFERENCES People(id_person);
+ADD Constraint [Person ID2] FOREIGN KEY (id_person) REFERENCES People(id_person) ON DELETE CASCADE ON UPDATE CASCADE;
 
 ALTER TABLE Person_awards
-ADD Constraint [Production ID6] FOREIGN KEY (id_production) REFERENCES Productions(id_production);
+ADD Constraint [Production ID6] FOREIGN KEY (id_production) REFERENCES Productions(id_production) ON DELETE CASCADE ON UPDATE CASCADE;
 
 CREATE TABLE Production_awards (
     id_award INT PRIMARY KEY IDENTITY(1,1),
@@ -175,7 +175,14 @@ CREATE TABLE Production_awards (
 );
 
 ALTER TABLE Production_awards
-ADD Constraint [Ceremony ID1] FOREIGN KEY (id_ceremony) REFERENCES Award_ceremonies(id_ceremony);
+ADD Constraint [Ceremony ID1] FOREIGN KEY (id_ceremony) REFERENCES Award_ceremonies(id_ceremony) ON DELETE CASCADE ON UPDATE CASCADE;
 
 ALTER TABLE Production_awards
-ADD Constraint [Production ID7] FOREIGN KEY (id_production) REFERENCES Productions(id_production);
+ADD Constraint [Production ID7] FOREIGN KEY (id_production) REFERENCES Productions(id_production) ON DELETE CASCADE ON UPDATE CASCADE;
+
+CREATE TABLE User_table (
+    id_user INT PRIMARY KEY IDENTITY(1,1),
+    username VARCHAR(255),
+    userpassword VARCHAR(255),
+    user_type VARCHAR(255)
+);
