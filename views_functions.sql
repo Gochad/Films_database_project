@@ -44,3 +44,4 @@ CREATE VIEW Money_from_one_person AS
     JOIN Productions p ON (p.id_production = ps.id_production)
 
 
+
