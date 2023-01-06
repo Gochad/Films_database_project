@@ -13,7 +13,7 @@ Na diagramie znajduję sie graficzna reprezentacja zależności pomiędzy tabela
 ![img.png](img.png)
 
 ## Schemat bazy danych
-![img_1.png](img_1.png)
+![img1.png](img1.png)
 
 ## Spis tabel
 1. User_table
