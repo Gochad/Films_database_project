@@ -1,4 +1,4 @@
-#Projekt bazy danych filmów i seriali
+# Projekt bazy danych filmów i seriali
 
 ## Założenia projektu
 Celem projektu jest stworzenie serwisu ułatwiającego wyszukiwanie danych dotyczących produkcji filmowych, serialowych i osób z nimi związanych.
