@@ -1,3 +1,5 @@
+#Projekt bazy danych filmów i seriali
+
 ## Założenia projektu
 Celem projektu jest stworzenie serwisu ułatwiającego wyszukiwanie danych dotyczących produkcji filmowych, serialowych i osób z nimi związanych.
 Baza może zostać użyta przez aplikacje, portale zajmujące się ocenami filmowymi, gromadzeniem informacji o filmach, serialach i postaciach kina. Podstawowymi założeniami projektu jest prostota i dbanie o to, żeby w bazie było jak najmniej zduplikowanych rekordów.
